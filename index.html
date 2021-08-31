@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <header>
+    <div class="container-header">
+      <div
+        style="
+          width: 800px;
+          margin: auto;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <h1>
+          <span style="text-align: start">Olá,</span> <br />
+          Me chamo <span style="color: brown"> Matheus Martins</span> <br />
+          Sou desenvolvedor Web/Mobile
+        </h1>
+        <div class="circular">
+          <img src="C:\Users\Matheus\Desktop\portfolio\picture.jpeg" />
+        </div>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div>
+      <h1>Sobre mim</h1>
+      <text>
+        Olá, meu nome é Matheus, tenho 22 anos, atualmente trabalho como
+        autonomo. Venho desenvolvendo alguns projetos pessoais, voltado para
+        area de automação comercial.
+      </text>
+      <h1>Contato</h1>
+      <div style="justify-content: center; display: flex; gap: 5px">
+        <a>
+          <img
+            src="https://imagepng.org/wp-content/uploads/2018/03/gmail-cone-icon.png"
+          />
+          <text style="margin: 5px;">matheus.s.martins98@gmail.com</text>
+        </a>
+        <a>
+          <img
+            src="C:\Users\Matheus\Desktop\portfolio\whatsapp.png"
+          />
+          <text style="margin: 5px;">(69)9 93750103</text>
+        </a>
+      </div>
+      <h1>Meus conhecimentos</h1>
+      <div style="justify-content: center; display: flex; gap: 5px">
+        <a>
+          <img src="C:\Users\Matheus\Desktop\portfolio\react-icon-9.jpg" />
+          <text>React Js/Native</text>
+        </a>
+        <a>
+          <img src="C:\Users\Matheus\Desktop\portfolio\javascripticon.png" />
+          <text>JavaScript</text>
+        </a>
+        <a>
+          <img src="C:\Users\Matheus\Desktop\portfolio\htmlicon.png" />
+          <text>Html</text>
+        </a>
+        <a>
+          <img src="C:\Users\Matheus\Desktop\portfolio\cssicon.png" />
+          <text>CSS</text>
+        </a>
+        <a>
+          <img src="C:\Users\Matheus\Desktop\portfolio\nodeicon.png" />
+          <text>Node JS</text>
+        </a>
+      </div>
+    </div>
+    <div class="projetos-colum">
+      <h1>Meus Projetos</h1>
+      <div style="display: flex; flex-direction: column">
+        <h1>
+          Cardapio Virtual -
+          <span style="color: brown">Em desenvolvimento</span>
+        </h1>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1/2</div>
+            <img src="C:\Users\Matheus\Desktop\portfolio\cardapiovirtual.png" />
+            <div class="text">Tela Inicial</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">2/2</div>
+            <img
+              src="C:\Users\Matheus\Desktop\portfolio\cardapio virtual opcoes.png"
+            />
+            <div class="text">Opcoes</div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+        <div
+          style="
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+          "
+        >
+          <h2>
+            O cardapio virtual tem o intuito de otimizar o tempo de atendimento
+            via whatsapp/web.
+          </h2>
+          <a
+            style="color: rgb(66, 66, 218); font-size: larger"
+            href="https://pedidos-chi.vercel.app/"
+          >
+            <h2>Demo</h2>
+            <a
+              style="text-align: center"
+              href="https://github.com/MatheusMartinsss/pedidos"
+            >
+              <img
+                style="width: 50px"
+                src="C:\Users\Matheus\Desktop\portfolio\pngwing.com.png"
+              />
+            </a>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>
